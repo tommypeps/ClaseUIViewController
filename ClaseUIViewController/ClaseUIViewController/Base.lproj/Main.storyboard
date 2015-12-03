@@ -219,10 +219,10 @@
             </objects>
             <point key="canvasLocation" x="1953" y="1330"/>
         </scene>
-        <!--View Controller-->
+        <!--Test View Controller-->
         <scene sceneID="laq-Sk-Ndz">
             <objects>
-                <viewController storyboardIdentifier="storyboard" id="AY0-Co-j4W" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="storyboard" id="AY0-Co-j4W" customClass="testViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EfN-k0-OIa"/>
                         <viewControllerLayoutGuide type="bottom" id="FZ3-1v-uUb"/>
@@ -230,6 +230,16 @@
                     <view key="view" contentMode="scaleToFill" id="cdz-84-cMa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1P-V3-8uF">
+                                <rect key="frame" x="270" y="285" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="touch:" destination="AY0-Co-j4W" eventType="touchUpInside" id="JyA-DY-yR1"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.29240473441992387" green="0.52883287292817682" blue="0.45053454930995418" alpha="1" colorSpace="calibratedRGB"/>
                     </view>

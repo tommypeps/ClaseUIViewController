@@ -24,6 +24,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)touch:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 /*
 #pragma mark - Navigation
 
