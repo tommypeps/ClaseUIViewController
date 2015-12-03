@@ -29,4 +29,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)navigationButton:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main"
+                                                           bundle:[NSBundle mainBundle]];
+    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"storyboard"];
+    
+    
+    [self.navigationController pushViewController:vc
+                                         animated:YES];
+}
 @end
