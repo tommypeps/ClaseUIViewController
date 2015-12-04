@@ -8,7 +8,8 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()  <UITextFieldDelegate>
+@property (strong, nonatomic) IBOutlet UITextField *textbox;
 
 @end
 
@@ -16,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.textbox setDelegate:self];
     // Do any additional setup after loading the view, typically from a nib.
     [self dismissViewControllerAnimated:YES
 
@@ -37,5 +39,20 @@
     
     [self.navigationController pushViewController:vc
                                          animated:YES];
+}
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"text"]) {
+        [segue.destinationViewController setValue:self.textbox.text
+                                            forKey:@"text"];
+         
+         
+         
+         }
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    [self performSegueWithIdentifier:@"text" sender:self];
+    return NO;
 }
 @end
